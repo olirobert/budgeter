@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "budgeter"
+version = "0.1.0"
+description = "A simple library to script a budget"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Olivier Robert" }]
+dependencies = [
+    "pythonnet",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+budgeter = ["BudgetCalculator/**/*"]
